@@ -11,7 +11,8 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 RUN pip install awscli
-RUN chmod +x build
 
 COPY build /build
+RUN chmod +x build
+
 CMD /build
